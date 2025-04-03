@@ -1,0 +1,28 @@
+{
+  "MasterData": {
+    "advocateType": [
+      {
+        "code": "PROSECUTOR",
+        "displayName": "Public Prosecutor",
+        "isActive": true
+      },
+      {
+        "code": "PUBLIC_DEFENDER",
+        "displayName": "Public Defender",
+        "isActive": true
+      }
+    ],
+    "userType": [
+      {
+        "code": "ADVOCATE",
+        "displayName": "Advocate",
+        "isActive": true
+      },
+      {
+        "code": "ADVOCATE_CLERK",
+        "displayName": "Advocate Clerk",
+        "isActive": true
+      }
+    ]
+  }
+}

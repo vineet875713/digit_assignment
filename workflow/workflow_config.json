@@ -1,0 +1,62 @@
+{
+  "businessService": "AdvocateRegistration",
+  "states": [
+    {
+      "uuid": "5a3e7b80-1234-4b5c-89c3-4d5e8f6f1a0a",
+      "tenantId": "default",
+      "state": "User Registration Requested",
+      "applicationStatus": "USER_REGISTRATION_REQUESTED",
+      "docUploadRequired": false,
+      "isStateUpdatable": false,
+      "actions": [
+        {
+          "action": "Register",
+          "roles": [
+            "ADVOCATE",
+            "ADVOCATE_CLERK"
+          ],
+          "nextState": "User Registration Requested"
+        },
+        {
+          "action": "Auto Approve",
+          "roles": [
+            "SYSTEM"
+          ],
+          "nextState": "User Registered"
+        },
+        {
+          "action": "Approve",
+          "roles": [
+            "NYAY_MITRA"
+          ],
+          "nextState": "User Registered"
+        },
+        {
+          "action": "Reject",
+          "roles": [
+            "NYAY_MITRA"
+          ],
+          "nextState": "User Rejected"
+        }
+      ]
+    },
+    {
+      "uuid": "1c3f4b7a-5678-4b3d-9b12-a7e5d6f8g9h0",
+      "tenantId": "default",
+      "state": "User Registered",
+      "applicationStatus": "USER_REGISTERED",
+      "docUploadRequired": false,
+      "isStateUpdatable": true,
+      "actions": []
+    },
+    {
+      "uuid": "8d5e9f2b-6789-4d2c-8a6b-5e4f3g2h1i0j",
+      "tenantId": "default",
+      "state": "User Rejected",
+      "applicationStatus": "USER_REJECTED",
+      "docUploadRequired": false,
+      "isStateUpdatable": false,
+      "actions": []
+    }
+  ]
+}

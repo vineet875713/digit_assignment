@@ -1,0 +1,57 @@
+serviceMaps:
+  serviceName: advocate-registration
+  mappings:
+    - topic: advocate-create-topic
+      description: "Persists Advocate Registration data"
+      fromTopic: true
+      isTransaction: true
+      persist:
+        - query: INSERT INTO advocate (id, tenant_id, application_number, bar_registration_number, advocate_type, organisation_id, individual_id, is_active, workflow, documents, audit_details, additional_details, rejection_reason, created_time, last_modified_time)
+          basePath: $.advocate
+          jsonMaps:
+            - jsonPath: $.id
+            - jsonPath: $.tenantId
+            - jsonPath: $.applicationNumber
+            - jsonPath: $.barRegistrationNumber
+            - jsonPath: $.advocateType
+            - jsonPath: $.organisationID
+            - jsonPath: $.individualId
+            - jsonPath: $.isActive
+            - jsonPath: $.workflow
+            - jsonPath: $.documents
+            - jsonPath: $.auditDetails
+            - jsonPath: $.additionalDetails
+            - jsonPath: $.rejectionReason
+            - jsonPath: $.createdTime
+            - jsonPath: $.lastModifiedTime
+
+    - topic: advocate-update-topic
+      description: "Updates Advocate Registration data"
+      fromTopic: true
+      isTransaction: true
+      persist:
+        - query: UPDATE advocate SET bar_registration_number=?, advocate_type=?, organisation_id=?, individual_id=?, is_active=?, workflow=?, documents=?, audit_details=?, additional_details=?, rejection_reason=?, last_modified_time=? WHERE application_number=?
+          basePath: $.advocate
+          jsonMaps:
+            - jsonPath: $.barRegistrationNumber
+            - jsonPath: $.advocateType
+            - jsonPath: $.organisationID
+            - jsonPath: $.individualId
+            - jsonPath: $.isActive
+            - jsonPath: $.workflow
+            - jsonPath: $.documents
+            - jsonPath: $.auditDetails
+            - jsonPath: $.additionalDetails
+            - jsonPath: $.rejectionReason
+            - jsonPath: $.lastModifiedTime
+            - jsonPath: $.applicationNumber
+
+    - topic: advocate-delete-topic
+      description: "Deletes Advocate Record"
+      fromTopic: true
+      isTransaction: true
+      persist:
+        - query: DELETE FROM advocate WHERE application_number=?
+          basePath: $.advocate
+          jsonMaps:
+            - jsonPath: $.applicationNumber

@@ -1,0 +1,183 @@
+{
+  "info": {
+    "_postman_id": "fe1ed49b-c53c-4e39-abd0-e39ae13f53cc",
+    "name": "digit-assignment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "41985468"
+  },
+  "item": [
+    {
+      "name": "{{baseUrl}}/advocate/v1/_create",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"requestInfo\": {\n    \"apiId\": \"org.egov.advocate\",\n    \"ver\": \"1.0\",\n    \"ts\": 1700000000000,\n    \"action\": \"_create\"\n  },\n  \"advocate\": {\n    \"tenantId\": \"default\",\n    \"applicationNumber\": \"ADVOC_001_2025\",\n    \"barRegistrationNumber\": \"BR12345\",\n    \"advocateType\": \"PUBLIC_DEFENDER\",\n    \"organisationID\": \"46b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n    \"individualId\": \"IND12345\",\n    \"isActive\": true,\n    \"workflow\": {\n      \"action\": \"APPLY\"\n    },\n    \"documents\": [],\n    \"auditDetails\": {\n      \"createdBy\": \"user-1\",\n      \"createdTime\": 1700000000000\n    },\n    \"additionalDetails\": {}\n  }\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/advocate/v1/_create",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "advocate",
+            "v1",
+            "_create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update advocate",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"requestInfo\": {\n        \"apiId\": \"org.egov.advocate\",\n        \"ver\": \"1.0\",\n        \"ts\": 1700000000000,\n        \"action\": \"_update\"\n    },\n    \"advocates\": [\n        {\n            \"id\": \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n            \"tenantId\": \"default\",\n            \"applicationNumber\": \"ADVOC_001_2025\",\n            \"barRegistrationNumber\": \"BR67890\",\n            \"advocateType\": \"PROSECUTOR\",\n            \"organisationID\": \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n            \"individualId\": \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n            \"isActive\": true,\n            \"workflow\": {\n                \"action\": \"SUBMIT\"\n            },\n            \"documents\": [],\n            \"auditDetails\": {\n                \"createdBy\": \"user-1\",\n                \"createdTime\": 1700000000000\n            },\n            \"additionalDetails\": {}\n        }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/advocate/v1/_update",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "advocate",
+            "v1",
+            "_update"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "search advocate",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"requestInfo\": {\n        \"apiId\": \"org.egov.advocate\",\n        \"ver\": \"1.0\",\n        \"ts\": 1700000000000,\n        \"action\": \"_update\"\n    },\n    \"advocates\": [\n        {\n            \"id\": \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n            \"tenantId\": \"default\",\n            \"applicationNumber\": \"ADVOC_001_2025\",\n            \"barRegistrationNumber\": \"BR67890\",\n            \"advocateType\": \"PROSECUTOR\",\n            \"organisationID\": \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n            \"individualId\": \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n            \"isActive\": true,\n            \"workflow\": {\n                \"action\": \"SUBMIT\"\n            },\n            \"documents\": [],\n            \"auditDetails\": {\n                \"createdBy\": \"user-1\",\n                \"createdTime\": 1700000000000\n            },\n            \"additionalDetails\": {}\n        }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/advocate/v1/_update",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "advocate",
+            "v1",
+            "_update"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "verify advocate",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"requestInfo\": {\n        \"apiId\": \"org.egov.advocate\",\n        \"ver\": \"1.0\",\n        \"ts\": 1700000000000,\n        \"action\": \"_update\"\n    },\n    \"advocates\": [\n        {\n            \"id\": \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n            \"tenantId\": \"default\",\n            \"applicationNumber\": \"ADVOC_001_2025\",\n            \"barRegistrationNumber\": \"BR67890\",\n            \"advocateType\": \"PROSECUTOR\",\n            \"organisationID\": \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n            \"individualId\": \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n            \"isActive\": true,\n            \"workflow\": {\n                \"action\": \"SUBMIT\"\n            },\n            \"documents\": [],\n            \"auditDetails\": {\n                \"createdBy\": \"user-1\",\n                \"createdTime\": 1700000000000\n            },\n            \"additionalDetails\": {}\n        }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/advocate/v1/_update",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "advocate",
+            "v1",
+            "_update"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create clerk",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"requestInfo\": {\n        \"apiId\": \"org.egov.advocate\",\n        \"ver\": \"1.0\",\n        \"ts\": 1700000000000,\n        \"action\": \"_update\"\n    },\n    \"advocates\": [\n        {\n            \"id\": \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n            \"tenantId\": \"default\",\n            \"applicationNumber\": \"ADVOC_001_2025\",\n            \"barRegistrationNumber\": \"BR67890\",\n            \"advocateType\": \"PROSECUTOR\",\n            \"organisationID\": \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n            \"individualId\": \"046b6c7f-0b8a-43b9-b35d-6489e6daee91\",\n            \"isActive\": true,\n            \"workflow\": {\n                \"action\": \"SUBMIT\"\n            },\n            \"documents\": [],\n            \"auditDetails\": {\n                \"createdBy\": \"user-1\",\n                \"createdTime\": 1700000000000\n            },\n            \"additionalDetails\": {}\n        }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/advocate/v1/_update",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "advocate",
+            "v1",
+            "_update"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
